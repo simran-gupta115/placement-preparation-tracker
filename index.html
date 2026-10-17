@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement preparation tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MY PLACEMENT TRACKER</h1>
+    <p>Welcome lets prepare for placement together</p>
+    <h2>My Preparation Dashboard</h2>
+    <div class="Dashboard">
+        <div class="card">
+            <h3>DSA Question</h3>
+            <p>0 Question practiced</p>
+            <button>view DSA</button>
+        </div>
+        <div class="card">
+            <h3>Aptitude questions</h3>
+            <p>0 Questions practiced</p>
+            <button>view Aptitude</button>
+        </div>
+        <div class="card">
+            <h3>placement Preparation</h3>
+            <p>Start your journey!</p>
+            <button>Get started</button>
+        </div>
+    </div>
+    <FOOter>
+        <P>Keep learning keep growing!</P>
+    </FOOter>
+
+    <section class="task-section">
+        <h2>My Daily Tasks</h2>
+        <div class="weekly-report">
+    <h3>📊 Weekly Study Report</h3>
+
+    <div class="weekly-stats">
+        <div>
+            <p>Total Tasks</p>
+            <h4 id="weeklyTotal">0</h4>
+        </div>
+
+        <div>
+            <p>Completed</p>
+            <h4 id="weeklyCompleted">0</h4>
+        </div>
+
+        <div>
+            <p>Pending</p>
+            <h4 id="weeklyPending">0</h4>
+        </div>
+    </div>
+</div>
+        <div class="upcoming-deadlines">
+    <h3>📅 Upcoming Deadlines</h3>
+    <ul id="deadlineList"></ul>
+</div>
+        <div class="streak-card">
+    <h3>🔥 Daily Study Streak</h3>
+    <p id="streakCount">0 Days</p>
+    <p>Keep learning, keep growing!</p>
+</div>
+        <div class="study-goal">
+    <h3>My Daily Study Goal 🎯</h3>
+
+    <input
+        type="number"
+        id="dailyGoal"
+        placeholder="Enter daily task target"
+        min="1"
+    >
+
+    <button id="saveGoalBtn">Save Goal</button>
+
+    <p id="goalMessage">Set your daily target!</p>
+    <div class="goal-progress-bar">
+    <div id="goalProgressFill"></div>
+</div>
+
+<p id="goalProgressText">0% completed</p>
+</div>
+        <div class="task-stats">
+
+    <div class="stat-card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+    </div>
+    <div class="progress-section">
+
+    <h3>My Progress</h3>
+
+    <div class="progress-info">
+        <span>Overall Completion</span>
+        <span id="progressText">0%</span>
+    </div>
+
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+
+</div>
+
+    <div class="stat-card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+    </div>
+
+</div>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter your task...">
+            <select id="taskCategory">
+    <option value="DSA">DSA</option>
+    <option value="Aptitude">Aptitude</option>
+    <option value="Interview">Interview Preparation</option>
+    <option value="Other" selected>Other</option>
+</select>
+
+<div class="task-deadline">
+    <label for="taskDeadline">Task Deadline:</label>
+    <input type="date" id="taskDeadline">
+</div>
+
+<div class="task-priority">
+    <label for="taskPriority">Priority:</label>
+    <select id="taskPriority">
+        <option value="High">High</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Low">Low</option>
+    </select>
+</div>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <div class="search-section">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search your tasks..."
+        oninput="searchTasks()"
+    >
+</div>
+        <div class="task-filters">
+            <select id="categoryFilter" onchange="filterByCategory()">
+    <option value="all">All Categories</option>
+    <option value="DSA">DSA</option>
+    <option value="Aptitude">Aptitude</option>
+    <option value="Interview">Interview Preparation</option>
+    <option value="Other">Other</option>
+</select>
+    <button onclick="filterTasks('all')">All Tasks</button>
+    <button onclick="filterTasks('completed')">Completed</button>
+    <button onclick="filterTasks('pending')">Pending</button>
+</div>
+
+        <ul id="taskList"></ul>
+    </section>
+    <script src="script.js"></script>
+    
+</body>
+</html>
